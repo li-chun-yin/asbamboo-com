@@ -9,10 +9,13 @@
     <title>上海一竹网络科技有限公司</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/src/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Icon CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- font-awesome CSS -->
+    <link href="/src/font-awesome.css" rel="stylesheet">
+
+    <!-- time-line CSS -->
+    <link href="/src/timeline.css" rel="stylesheet">
 
     <style>
         body {
@@ -37,16 +40,16 @@
             }
         }
 
-        .container {
-            max-width: 960px;
-        }
+        /* .container { */
+            /* max-width: 960px; */
+        /* } */
 
         .pricing-header {
             max-width: 700px;
         }
         
     </style>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="/src/jquery.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container py-3">
@@ -61,7 +64,7 @@
                     <a class="me-3 py-2 text-dark text-decoration-none" href="#">Enterprise</a>
                     <a class="me-3 py-2 text-dark text-decoration-none" href="#">Support</a> -->
                     <a class="py-2 text-dark text-decoration-none" href="tel:15900578621">
-                        <i class="bi-telephone"></i>15900578621
+                        <i class="fa fa-phone"></i>15900578621
                     </a>
                 </nav>
             </div>
@@ -84,7 +87,7 @@
                         <div class="card-body">
                             <ul class="mt-3 mb-4">
                                 <li>可以根据你满意的第三方网站，100%仿制</li>
-                                <li>全程服务（包括注册域名、购买服务器、程序发布、后期维护等）</li>
+                                <li>全程服务</br/>（包括注册域名、购买服务器、程序发布、后期维护等）</li>
                                 <li>终身维护服务（按年续费）</li>
                             </ul>
                         </div>
@@ -123,91 +126,173 @@
 
             <hr class="my-4" />
 
-            <h2 class="display-6 text-center mb-4">咨询&合作</h2>    
-    
-            <div class="col-12">
-                <form>
-                    <div class="row g-3">
-                        <div class="col-6">
-                            <label for="phone" class="form-label">联系电话</label>
-                            <input name="phone"
-                                type="text"
-                                class="form-control"
-                                id="phone"
-                                placeholder="为方便联系，请填写联系电话"
-                            />
+            
+            
+            <div class="row">
+                <div class="col-md-8">
+                    
+                    <div class="timeline2-centered">
+                        <h2 class="display-6 text-center">服务流程</h2> 
+                        <div class="timeline2-entry">
+                            <div class="timeline2-entry-inner">
+                                <div class="timeline2-icon bg-success"><i class="fa fa-comments"></i></div>
+                                <div class="timeline2-label">
+                                    <h2><a href="#"><strong>确定需求</strong></a></h2>
+                                    <p>收集客户需求，选择合适的网站样子，确定是仿照某目标网站（程序），或者完全独立设计研发。</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6">
-                            <label for="name" class="form-label">怎么称呼您</label>
-                            <input name="name"
-                                type="text" 
-                                class="form-control" 
-                                id="name" 
-                                placeholder=""
-                            />
+                        <div class="timeline2-entry">
+                            <div class="timeline2-entry-inner">
+                                <div class="timeline2-icon bg-secondary"><i class="fa fa-money"></i></div>
+                                <div class="timeline2-label">
+                                    <h2><a href="#"><strong>评估报价</strong></a></h2>
+                                    <p>建立需求文档，确定工作计划，并且根据工作量提供报价</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6">
-                            <label for="email" class="form-label">Email</label>
-                            <input name="email"
-                                type="text"
-                                class="form-control"
-                                id="email"
-                                placeholder="为方便联系，请填写Email"
-                            />
+                        <div class="timeline2-entry">
+                            <div class="timeline2-entry-inner">
+                                <div class="timeline2-icon bg-info"><i class="fa fa-file"></i></div>
+                                <div class="timeline2-label">
+                                    <h2><a href="#"><strong>签订合同</strong></a></h2>
+                                    <p>与客户签订合同，正式达成合作，建立工作文档。</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-6">
-                            <label for="contact" class="form-label">其他联系方式</label>
-                            <input name="contact"
-                                type="text"
-                                class="form-control"
-                                id="contact"
-                                placeholder="如:qq:11112222"
-                            />
+                        <div class="timeline2-entry">
+                            <div class="timeline2-entry-inner">
+                                <div class="timeline2-icon bg-warning"><i class="fa fa-group"></i></div>
+                                <div class="timeline2-label">
+                                    <h2><a href="#"><strong>程序研发</strong></a></h2>
+                                    <p>包括程序设计，程序前端开发，程序服务端开发，域名注册，备案等工作同步进行。</p>
+                                </div>
+                            </div>
                         </div>
-        
-                        <div class="col-12">
-                            <label for="content" class="form-label">咨询&合作内容</label>
-                            <textarea name="content"
-                                class="form-control"
-                                id="content"
-                                placeholder="请输入咨询、意见或者合作相关的内容"
-                                rows="5"
-                                required
-                            ></textarea>
+                        <div class="timeline2-entry">
+                            <div class="timeline2-entry-inner">
+                                <div class="timeline2-icon bg-warning"><i class="fa fa-flag"></i></div>
+                                <div class="timeline2-label">
+                                    <h2><a href="#"><strong>客户验收</strong></a></h2>
+                                    <p>我们会积极配合客户验收，提供程序的使用说明书，程序源代码等</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline2-entry">
+                            <div class="timeline2-entry-inner">
+                                <div class="timeline2-icon bg-warning"><i class="fa fa-check"></i></div>
+                                <div class="timeline2-label">
+                                    <h2><a href="#"><strong>系统部署</strong></a></h2>
+                                    <p>待客户满意后，网站（或其他）程序正式部署到服务器上</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline2-entry">
+                            <div class="timeline2-entry-inner">
+                                <div class="timeline2-icon bg-warning"><i class="fa fa-list"></i></div>
+                                <div class="timeline2-label">
+                                    <h2><a href="#"><strong>后期维护</strong></a></h2>
+                                    <p>自合同签订1年内，客户在使用过程中，有任何问题，我们保证解答和培训。</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <hr class="my-4" />                    
-                    <button class="w-100 btn btn-primary btn-lg" type="button" onclick="doPostForm(this)">提交表单</button>
-                    <script type="text/javascript">
-                        var doPostForm = (e) => {
-                            if($('#content').val().trim() == ''){
-                                alert('请输入咨询&合作内容。');
-                                return
-                            }
-                            if($('#phone').val().trim() == '' && $('#name').val().trim() == '' && $('#email').val().trim() == ''&& $('#contact').val().trim() == ''&& $('#content').val().trim() == ''){
-                                alert('请填写一种联系方式。');
-                                return;
-                            }
-                            $('form').find('input,textarea,button').prop('disabled', true);
-                            $.post('http://srv.asbamboo.com:8632/send/content', {
-                                email: 'admin@mail.asbamboo.com',
-                                subject: '官网咨询与合作',
-                                content: $('form').serialize()
-                            }, function(res){
-                                $('form').find('input,textarea,button').prop('disabled', false);
-                                $('form').get(0).reset();
-                                if(res == 'success'){
-                                    $(e).before('<div id="message" class="alert alert-success" role="alert">感谢您的咨询，我们稍后与您联系。</div>');
-                                }else{
-                                    $(e).before('<div id="message" class="alert alert-danger" role="alert">对不起表单提交失败了，您可以重试。</div>');
+                </div>
+                <div class="col-md-4">
+                    <h2 class="display-6 text-center mb-4">咨询&合作</h2>    
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <label for="phone" class="form-label">联系电话</label>
+                                <input name="phone"
+                                    type="text"
+                                    class="form-control"
+                                    id="phone"
+                                    placeholder="为方便联系，请填写联系电话"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label for="name" class="form-label">怎么称呼您</label>
+                                <input name="name"
+                                    type="text" 
+                                    class="form-control" 
+                                    id="name" 
+                                    placeholder=""
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label for="email" class="form-label">Email</label>
+                                <input name="email"
+                                    type="text"
+                                    class="form-control"
+                                    id="email"
+                                    placeholder="为方便联系，请填写Email"
+                                />
+                            </div>
+                            <div class="col-6">
+                                <label for="contact" class="form-label">其他联系方式</label>
+                                <input name="contact"
+                                    type="text"
+                                    class="form-control"
+                                    id="contact"
+                                    placeholder="如:qq:11112222"
+                                />
+                            </div>
+            
+                            <div class="col-12">
+                                <label for="content" class="form-label">咨询&合作内容</label>
+                                <textarea name="content"
+                                    class="form-control"
+                                    id="content"
+                                    placeholder="请输入咨询、意见或者合作相关的内容"
+                                    rows="5"
+                                    required
+                                ></textarea>
+                            </div>
+                        </div>
+                        <hr class="my-4" />                    
+                        <button class="w-100 btn btn-primary btn-lg" type="button" onclick="doPostForm(this)">提交表单</button>
+                        <script type="text/javascript">
+                            var doPostForm = (e) => {
+                                if($('#content').val().trim() == ''){
+                                    alert('请输入咨询&合作内容。');
+                                    return
                                 }
+                                if($('#phone').val().trim() == '' && $('#name').val().trim() == '' && $('#email').val().trim() == ''&& $('#contact').val().trim() == ''&& $('#content').val().trim() == ''){
+                                    alert('请填写一种联系方式。');
+                                    return;
+                                }
+
+                                $('body').append(
+                                    '<form id="submit-form" method="post" action="http://srv.asbamboo.com:8632/send/content" target="subwin">' + 
+                                        '<input type="hidden" name="email" value="admin@mail.asbamboo.com" />' +
+                                        '<input type="hidden" name="subject" value="官网咨询与合作" />' +
+                                        '<input type="hidden" name="content" value="" />' +
+                                    '</form>' +
+                                    '<iframe style="display:none" name="subwin" id="subwin"></iframe>'
+                                );
+
+                                $('#submit-form').find('[name="content"]').val($('form').serialize());
+
+                                $('form').find('input,textarea').prop('readonly', true);
+                                $('form').find('button').prop('disabled', true);
+
+                                $('#submit-form').submit();
+
+                                $(e).before('<div id="message" class="alert alert-success" role="alert">感谢您的咨询，我们稍后与您联系。</div>');
+
                                 setTimeout(()=>{
                                     $('#message').remove();
+                                    $('form').get(0).reset();
+                                    $('form').find('input,textarea').prop('readonly', false);
+                                    $('form').find('button').prop('disabled', false);
+                                    $('#submit-form').remove();
+                                    $('#subwin').remove();
                                 }, 2000);
-                            });    
-                        }
-                    </script>
-                </form>
+                            }
+                        </script>
+                    </form>
+                </div>
             </div>
         </main>
 
@@ -236,6 +321,6 @@
         </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="/src/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
