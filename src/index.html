@@ -45,7 +45,8 @@
             max-width: 700px;
         }
         
-    </style> 
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container py-3">
@@ -129,29 +130,83 @@
                     <div class="row g-3">
                         <div class="col-6">
                             <label for="phone" class="form-label">联系电话</label>
-                            <input type="text" class="form-control" id="phone" placeholder="为方便联系，请填写联系电话">
+                            <input name="phone"
+                                type="text"
+                                class="form-control"
+                                id="phone"
+                                placeholder="为方便联系，请填写联系电话"
+                            />
                         </div>
                         <div class="col-6">
                             <label for="name" class="form-label">怎么称呼您</label>
-                            <input type="text" class="form-control" id="name" placeholder="">
+                            <input name="name"
+                                type="text" 
+                                class="form-control" 
+                                id="name" 
+                                placeholder=""
+                            />
                         </div>
                         <div class="col-6">
                             <label for="email" class="form-label">Email</label>
-                            <input type="text" class="form-control" id="email" placeholder="为方便联系，请填写Email">
+                            <input name="email"
+                                type="text"
+                                class="form-control"
+                                id="email"
+                                placeholder="为方便联系，请填写Email"
+                            />
                         </div>
                         <div class="col-6">
                             <label for="contact" class="form-label">其他联系方式</label>
-                            <input type="text" class="form-control" id="email" placeholder="如:qq:11112222">
+                            <input name="contact"
+                                type="text"
+                                class="form-control"
+                                id="contact"
+                                placeholder="如:qq:11112222"
+                            />
                         </div>
         
                         <div class="col-12">
                             <label for="content" class="form-label">咨询&合作内容</label>
-                            <textarea class="form-control" id="content" placeholder="请输入咨询、意见或者合作相关的内容" rows="5">
-                            </textarea>
+                            <textarea name="content"
+                                class="form-control"
+                                id="content"
+                                placeholder="请输入咨询、意见或者合作相关的内容"
+                                rows="5"
+                                required
+                            ></textarea>
                         </div>
                     </div>
-                    <hr class="my-4" />
-                    <button class="w-100 btn btn-primary btn-lg" type="button">提交表单</button>
+                    <hr class="my-4" />                    
+                    <button class="w-100 btn btn-primary btn-lg" type="button" onclick="doPostForm(this)">提交表单</button>
+                    <script type="text/javascript">
+                        var doPostForm = (e) => {
+                            if($('#content').val().trim() == ''){
+                                alert('请输入咨询&合作内容。');
+                                return
+                            }
+                            if($('#phone').val().trim() == '' && $('#name').val().trim() == '' && $('#email').val().trim() == ''&& $('#contact').val().trim() == ''&& $('#content').val().trim() == ''){
+                                alert('请填写一种联系方式。');
+                                return;
+                            }
+                            $('form').find('input,textarea,button').prop('disabled', true);
+                            $.post('http://srv.asbamboo.com:8632/send/content', {
+                                email: 'admin@mail.asbamboo.com',
+                                subject: '官网咨询与合作',
+                                content: $('form').serialize()
+                            }, function(res){
+                                $('form').find('input,textarea,button').prop('disabled', false);
+                                $('form').get(0).reset();
+                                if(res == 'success'){
+                                    $(e).before('<div id="message" class="alert alert-success" role="alert">感谢您的咨询，我们稍后与您联系。</div>');
+                                }else{
+                                    $(e).before('<div id="message" class="alert alert-danger" role="alert">对不起表单提交失败了，您可以重试。</div>');
+                                }
+                                setTimeout(()=>{
+                                    $('#message').remove();
+                                }, 2000);
+                            });    
+                        }
+                    </script>
                 </form>
             </div>
         </main>
@@ -180,5 +235,7 @@
             </div>
         </footer>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
